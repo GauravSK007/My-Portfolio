@@ -1,0 +1,357 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Gaurav Singh - Portfolio Landing Page</title>
+    <link
+      href="https://fonts.googleapis.com/css2?family=Jersey+10&display=swap"
+      rel="stylesheet" />
+    <style>
+
+      * {
+        letter-spacing: 0.1em;
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+      }
+
+      body {
+        font-family: "Jersey 10", sans-serif;
+        background-color: #000;
+        color: #fff;
+        overflow-x: hidden;
+      }
+
+      main {
+        height: 100vh;
+        width: 100vw;
+      }
+
+      .content {
+        height: 100%;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-around;
+      }
+
+      .ti-container {
+        margin-top: 50px;
+        display: flex;
+        justify-content: space-around;
+        align-items: center;
+        height: 330px;
+      }
+
+      .img {
+        height: 540px;
+        width: 540px;
+        margin: 50px 0;
+        border-radius: 200px;
+        overflow: hidden;
+      }
+
+      button {
+        margin: 10px 60px;
+        border: none;
+        background-color: #00bcd4;
+        color: #ffffff;
+        height: 92px;
+        width: 340px;
+        font-size: 3.4rem;
+        font-family: "Jersey 10", sans-serif;
+        cursor: pointer;
+        box-shadow: 8px 9px 4px 0px rgba(255, 255, 255, 0.57);
+      }
+
+      button:hover {
+        box-shadow: 12px 12px 8px 0px rgba(255, 255, 255, 0.57);
+      }
+
+      .img img {
+        height: 100%;
+        width: 100%;
+        object-fit: cover;
+      }
+
+      .img:hover {
+        transform: scale(1.02);
+        box-shadow: 0 0 30px rgba(251, 199, 71, 0.5);
+      }
+
+      #main-heading {
+        font-size: 8.4rem;
+        margin: 0px 50px;
+      }
+
+      .terminal-hero {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+      }
+
+      .terminal {
+        background: #111;
+        padding: 1.5rem;
+        border-radius: 10px;
+        width: 730px;
+
+        height: 330px;
+        box-shadow: 0 0 20px rgba(0, 255, 0, 0.3);
+      }
+
+      .terminal-header {
+        display: flex;
+        gap: 0.5rem;
+        margin-bottom: 1rem;
+      }
+
+      .dot {
+        width: 12px;
+        height: 12px;
+        border-radius: 50%;
+      }
+
+      .red {
+        background: #ff5f56;
+      }
+
+      .yellow {
+        background: #ffbd2e;
+      }
+
+      .green {
+        background: #27c93f;
+      }
+
+      .terminal-body p {
+        margin: 0.4rem 0;
+        white-space: pre;
+        color: #00ff00;
+        font-size: 2rem;
+      }
+
+      .terminal-input {
+        margin-top: 1.5rem;
+        display: flex;
+        align-items: center;
+        font-family: "Courier New", monospace;
+        font-size: 1rem;
+        color: #00ff00;
+      }
+
+      .terminal-input span {
+        margin-right: 0.5rem;
+      }
+
+      .terminal-input input {
+        background: transparent;
+        border: none;
+        border-bottom: 2px solid #00ff00;
+        color: #00ff00;
+        outline: none;
+        font-family: inherit;
+        font-size: inherit;
+        caret-color: #00ff00;
+        width: 220px;
+      }
+
+      .terminal-input input::placeholder {
+        color: #00aa00;
+        opacity: 0.6;
+      }
+
+      @media screen and (max-width: 768px) {
+        main {
+          height: auto;
+          min-height: 100vh;
+        }
+
+        .content {
+          justify-content: flex-start;
+          padding: 20px 0;
+        }
+
+        #main-heading {
+          font-size: 4rem;
+          margin: 20px 20px;
+          text-align: center;
+        }
+
+        .ti-container {
+          flex-direction: column;
+          margin-top: 20px;
+          height: auto;
+          gap: 30px;
+        }
+
+        .img {
+          height: 250px;
+          width: 250px;
+          margin: 20px 0;
+          order: -1;
+        }
+
+        .terminal {
+          width: 90vw;
+          max-width: 500px;
+          height: auto;
+          min-height: 280px;
+          padding: 1rem;
+        }
+
+        .terminal-body p {
+          font-size: 1.2rem;
+        }
+
+        .terminal-input {
+          margin-top: 1rem;
+          font-size: 0.9rem;
+        }
+
+        .terminal-input input {
+          width: 180px;
+        }
+
+        button {
+          margin: 20px auto;
+          width: 280px;
+          height: 70px;
+          font-size: 2.5rem;
+        }
+      }
+
+      @media screen and (max-width: 480px) {
+        #main-heading {
+          font-size: 3.5rem;
+          margin: 15px 15px;
+        }
+
+        .img {
+          height: 200px;
+          width: 200px;
+          margin: 15px 0;
+        }
+
+        .terminal {
+          width: 92vw;
+          padding: 0.8rem;
+        }
+
+        .terminal-body p {
+          font-size: 1.1rem;
+          margin: 1.5rem 0;
+        }
+
+        .terminal-input {
+          font-size: 0.8rem;
+        }
+
+        .terminal-input input {
+          width: 150px;
+          font-size: 1.1rem;
+        }
+
+        button {
+          width: 240px;
+          height: 60px;
+          font-size: 2rem;
+          margin: 60px auto;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <main>
+      <div class="content">
+        <h1 id="main-heading">Gaurav Singh</h1>
+        <div class="ti-container">
+          <section class="terminal-hero">
+            <div class="terminal">
+              <div class="terminal-header">
+                <span class="dot red"></span>
+                <span class="dot yellow"></span>
+                <span class="dot green"></span>
+              </div>
+              <div class="terminal-body" id="terminal-body"></div>
+              <div
+                class="terminal-input"
+                id="terminal-input"
+                style="display: none">
+                <span>> </span>
+                <input
+                  type="text"
+                  id="terminal-command"
+                  placeholder="run portfolio()"
+                  autofocus />
+              </div>
+            </div>
+          </section>
+          <div class="img"><img src="landing.jpg" alt="" /></div>
+        </div>
+        <button onclick="window.location.href='main.html'">Get Started</button>
+      </div>
+      <script>
+
+        const terminalLines = [
+          "> Hello there, welcome to Gaurav.exe",
+          "> Initializing portfolio...",
+          "> Loading... ██████████████▒▒",
+          "> Ready to deploy...",
+        ];
+
+        const container = document.getElementById("terminal-body");
+        const inputWrapper = document.getElementById("terminal-input");
+        const commandInput = document.getElementById("terminal-command");
+
+        let lineIndex = 0;
+        let charIndex = 0;
+        let currentP = null;
+
+        function typeLine() {
+          if (lineIndex < terminalLines.length) {
+            if (!currentP) {
+              currentP = document.createElement("p");
+              container.appendChild(currentP);
+            }
+
+            const currentLine = terminalLines[lineIndex];
+            currentP.textContent += currentLine.charAt(charIndex);
+            charIndex++;
+
+            if (charIndex < currentLine.length) {
+              setTimeout(typeLine, 70);
+            } else {
+              lineIndex++;
+              charIndex = 0;
+              currentP = null;
+              setTimeout(typeLine, 500);
+            }
+          } else {
+            inputWrapper.style.display = "flex";
+            commandInput.focus();
+          }
+        }
+
+        window.onload = typeLine; // This lines runs the typeline function when site loads
+
+        commandInput.addEventListener("keydown", function (e) {
+          if (e.key === "Enter") {
+            const input = this.value.trim().toLowerCase();
+
+            if (
+              input === "run portfolio()" ||
+              input === "./launch.sh" ||
+              input === "start"
+            ) {
+              window.location.href = "main.html";
+            } else {
+              alert("bash: command not found 🤖");
+            }
+          }
+        });
+      </script>
+    </main>
+  </body>
+</html>
